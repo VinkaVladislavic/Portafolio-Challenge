@@ -1,0 +1,227 @@
+/* Este repositório base fué creado para ayudarte en caso que no sepas como comenzar, recuerda que el portafolio es tu carta de presentación y debes darle tu cara, por eso te invitamos a personalizarlo según tu estilo y preferencias no te limites apenas al layout propuesto en figma  
+*/
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+}
+
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+.cabecera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-de-fondo-menu);
+}
+
+.cabecera__logo {
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+}
+
+.cabecera__titulo {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.navegacion__lista {
+    display: none;
+}
+
+.navegacion__elemento a {
+    font-size: 0.9rem;
+}
+/* ------------------------------ Sección Presentación ------------------------------*/
+.presentacion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+}
+.presentacion__foto {
+    width: 98px;
+    height: 98px;
+}
+
+.redes {
+    display: flex;
+    gap: 8px;    
+}
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+.sobre-mi {
+    background-color: #EAF2FD;
+    padding: 16px;
+}
+
+/*------------------------------ Sección de Habilidades ------------------------------*/
+.habilidades__lista, .aficiones__lista {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.habilidades__titulo, .aficiones__titulo, .formacion__titulo, .proyectos__titulo {
+    text-align: center;
+}
+
+.habilidades__elemento, .aficiones__elemento {
+    gap: 8px;
+    padding: 16px;
+    background-color: var(--color-de-fondo-menu);
+    width: 116px;
+    height: 118px;
+}
+
+.habilidades__icono, .aficiones__icono {
+    padding-top: 38px;
+}
+/*------------------------------ Sección de Aficiones --------------------------------*/
+
+/*------------------------------ Sección de Proyectos --------------------------------*/
+.formacion {
+    background-color: #EAF2FD;
+}
+
+.formacion__lista {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formacion__icono {
+    background-color: var(--color-de-fondo-menu);
+    width: 296px;
+    height: 118px;
+    padding: 16px;
+}
+
+.proyectos {
+    padding: 32px;
+}
+
+
+/*------------------------------ Sección de Contacto ---------------------------------*/
+
+.contacto {
+    background-color: #EAF2FD;
+    padding: 32px;
+}
+
+.contacto__formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contacto__boton {
+    background-color: #2A7AE4;
+    padding: 12px 16px 12px 16px;
+    height: 40px;
+    width: 133px;
+}
+
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .cabecera__logo {
+        max-width: 100px;
+    }
+
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+
+    .navegacion__lista {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        margin-top: 0;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1rem;
+    }
+
+    .presentacion {
+        flex-direction: row;
+        gap: 16px;
+    }
+
+    .presentacion__foto {
+        width: 146px;
+        height: 146px;
+    }
+
+    .habilidades__lista, .aficiones__lista{
+        padding: 32px;
+        gap: 16px;
+    }
+
+    .habilidades__elemento, .aficiones__elemento {
+        width: 224px;
+        height: 118px;
+    }
+
+    .formacion__lista {
+        gap: 16px;
+    }
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+
+    .presentacion__foto {
+        width: 368px;
+        height: 368px;
+    }
+
+    .presentacion__titulo {
+        font-size: 52px;
+    }
+
+    .habilidades__elemento, .aficiones__elemento {
+        width: 176px;
+        height: 176px;
+    }
+
+    .habilidades__lista, .aficiones__lista {
+        padding: 62px;
+    }
+
+    .formacion__elemento {
+        width: 368px;
+    }
+}
